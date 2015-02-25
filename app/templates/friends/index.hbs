@@ -1,0 +1,15 @@
+<h1>Friends Index</h1>
+
+{{! The context here is the controller}}
+
+<h2>Total number of friends: {{model.length}}</h2>
+
+<ul>
+  {{#each friend in model}}
+  {{#link-to friend.fullName "friends.show" friend}}
+  <li>
+    ID {{friend.id}} -- {{friend.firstName}} {{friend.lastName}}
+  {{/link-to}}
+    </li>
+  {{/each}}
+</ul>
